@@ -1,0 +1,395 @@
+:root {
+    --color-texto: rgb(23,23,23);
+    --color-contraste: rgb(222, 12, 23);
+    --color-bg: rgb(0, 0, 0);
+    --color-bg-claro: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: var(--color-texto);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-texto);
+    color: var(--color-texto);
+    transition: all .15s ease;
+}
+a:hover {
+    color: var(--color-contraste);
+    border-color: var(--color-contraste);
+}
+
+figure {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+figcaption, .caption {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+main {
+    padding: 4rem 0 5rem;
+    min-height: calc(100vh - 308px);
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navegación, Header y Footer */
+
+header, footer {
+    background-color: var(--color-bg);
+    color: #fff;
+}
+
+footer {
+    padding: 1rem 0 4rem;
+}
+
+header a, footer a {
+    color: #fff;
+    border-bottom: none;
+}
+
+nav {
+    padding-bottom: 5rem;
+}
+
+nav ul, .nav-footer {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    margin-top: 0;
+}
+
+nav ul li {
+    font-size: 1.8rem;
+}
+
+nav ul li.active {
+    font-weight: 700;
+}
+
+nav ul li:after, .nav-footer li:after {
+    margin: 0 5px;
+    font-weight: initial;
+}
+
+nav ul li:after {
+    content: "\007C";
+}
+
+.nav-footer li:after {
+    content: "\00B7";
+}
+
+nav ul li:last-child:after, .nav-footer li:last-child:after {
+    content: "";
+    margin: 0;
+}
+
+/* Logo */
+
+.logo img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.logo a {
+    font-size: 6rem;
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.logo a:hover {
+    color: white;
+}
+
+
+/* Página principal */
+
+.cover-hero {
+    height: 100vh;
+    background-image: url('../img/home-hero.jpg');
+    background-position: top  center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.cover-hero header, .cover-hero  footer {
+    background-color: transparent;
+}
+
+.cover-hero main {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 222px);
+}
+
+.cover-hero .container {
+    width: 100%;
+}
+
+.cover-hero nav {
+    padding-top: 2rem;
+}
+
+.cover-hero .logo span {
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cover-hero .logo img {
+    max-height: 100%;
+}
+
+.cover-hero h1 {
+    margin: 0;
+}
+
+
+/* Practica el running */
+
+.c-pb li {
+    padding-bottom: 1rem;
+}
+
+iframe {
+    width: 80%;
+    height: 100%;
+    aspect-ratio: 560 / 315;
+}
+@media screen and (max-width: 991px) {
+    iframe {
+        width: 100%;
+    }
+}
+
+
+/* Rutas */
+
+.note {
+    background-color: var(--color-bg-claro);
+    padding: 2rem;
+    text-align: center;
+}
+
+.note .title {
+    font-size: 2em;
+    margin: 0;
+    line-height: 1;
+}
+
+table {
+    margin-top: 3rem;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-top: 1px solid var(--color-texto);
+    border-bottom: 1px solid var(--color-texto);
+}
+
+td, th {
+    padding: 1rem;
+}
+
+/* thead */
+
+thead th {
+    font-weight: 400;
+}
+
+thead th:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto;
+}
+
+thead th:nth-child(1), tbody th:nth-child(1) {
+    text-align: left;
+}
+
+thead th:nth-child(1):before {
+    margin: 0;
+    background-image: url('../img/location.png');
+}
+
+thead th:nth-child(2):before {
+    background-image: url('../img/distance.png');
+}
+
+thead th:nth-child(3):before {
+    background-image: url('../img/time.png');
+}
+
+thead th:nth-child(4):before {
+    background-image: url('../img/angle.png');
+}
+
+/* tbody */
+
+tbody td {
+    text-align: center;
+}
+
+/* odd and even */
+
+tbody tr:nth-child(odd) {
+    background-color: var(--color-bg-claro);
+}
+
+/* tfood */
+
+tfoot td {
+    font-size: 1.2rem;
+}
+
+/* caption */
+
+caption {
+    padding: 1rem;
+    caption-side: top;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1;
+    border-top: 1px solid var(--color-texto);
+}
+
+
+/* Hazte socio */
+
+form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+abbr[title=required] {
+    text-decoration: none;
+    font-size: 1.3rem;
+    position: relative;
+    top: -1px;
+}
+
+label abbr[title=required] {
+    margin-left: .5rem;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(23,23,23,.5);
+    padding: 20px;
+}
+
+fieldset ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+legend {
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input[type=checkbox], input[type=radio] {
+    width: auto;
+    border: none;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    width : 100%;
+    border: 1px solid rgba(23,23,23,.5);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+
+select {
+    font-family: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+} 
+
+input:focus,
+textarea:focus {
+    border-color: black;
+    outline: none;
+}
+
+input:focus-visible {
+    outline: none;
+    border-color: black;
+}
+
+input:focus:invalid {
+    box-shadow: none;
+}
+
+button[type=submit] {
+    text-transform: uppercase;
+    background-color: var(--color-contraste);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    margin: .5rem 0;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex > div {
+    width: calc(50% - 10px);
+    flex: 0 0 auto;
+}
+
+.submit {
+    padding: 1rem 9rem;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Inscripción socios | Ritmo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/isologo-white.png" alt="isologo ritmo">ritmo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="practica-el-running.html">Practica el running</a></li>
+                    <li><a href="rutas.html">Rutas</a></li>
+                    <li class="active">Hazte socio</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <h1>Hazme socio del club de running Ritmo</h1>
+                <form action="http://foo.com" method="get">
+                    <p class="caption">Los campos señalados con <abbr title="required"> * </abbr> son obligatorios</p>
+                    <fieldset>
+                        <legend>Tipo de cuota <strong><abbr title="required"> * </abbr></strong></legend>
+                        <ul>
+                            <li>
+                                <input type="radio" required name="cuota" id="cuota_1" value="mensual"><label for="cuota_1">Mensual (30 €)</label>
+                            </li>
+                            <li>
+                                <input type="radio" required name="cuota" id="cuota_2" value="trimestral"><label for="cuota_2">Trimestral (45 €)</label>
+                            </li>
+                            <li>
+                                <input type="radio" required name="cuota" id="cuota_3" value="annual"><label for="cuota_3">Anual (100 €)</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos personales y de contacto</legend>
+                        <div class="flex">
+                            <div>
+                                <label for="first_name"><span>Nombre:</span><abbr title="required">*</abbr></label>
+                                <input type="text" id="first_name" name="userfirstname" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð -]{2,64}" required>
+                            </div>
+                            <div>
+                                <label for="name"><span>Apellidos:</span><abbr title="required">*</abbr></label>
+                                <input type="text" id="name" name="username" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð -]{2,128}" required>
+                            </div>
+                            <div>
+                                <label for="mail"><span>Correo electrónico:</span><abbr title="required">*</abbr></label>
+                                <input type="email" id="mail" name="usermail" required>
+                            </div>
+                            <div>
+                                <label for="tel"><span>Teléfono:</span><abbr title="required">*</abbr></label>
+                                <input type="tel" id="tel" name="userphone" required>
+                            </div>
+                            <div>
+                                <label for="birth_date"><span>Fecha de nacimiento:</span><abbr title="required">*</abbr></label>
+                                <input type="date" id="birth_date" name="userdate" min="1910-01-08" max="2022-08-31" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Otras informaciones</legend>
+                        <div>
+                            <label for="message">¿Por qué estás interesado en hacerte socio?</label>
+                            <textarea id="message" name="msg" maxlength="140" rows="9"></textarea>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <label for="media"> <span>¿Por qué medio nos ha conocido?</span></label>
+                                <select id="media" name="netz">
+                                    <option value="standard">Selecciona una opción</option>
+                                    <option value="newspaper">Prensa</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="others">Otro socio</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Pago</legend>
+                        <div>
+                            <label for="accountname"><span>Titular de la cuenta:</span><abbr title="required">*</abbr></label>
+                            <input type="text" id="accountname" name="accountname" required>
+                        </div>
+                        <div>
+                            <label for="accountnumber"><span>Número de cuenta:</span><abbr title="required">*</abbr></label>
+                            <input type="text" id="accountnumber" name="accountnumber" pattern="[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}" required>
+                        </div>
+                    </fieldset>
+                    <div class="submit">
+                        <p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <strong>RITMO</strong>. 
+                            <strong>Finalidades</strong>: recogida de datos para la inscripción como socio del interesado. 
+                            <strong>Legitimación</strong>: Consentimiento del intersado. 
+                            <strong>Destinatarios</strong>: No están previstas cesiones de datos a terceros, excepto obligación legal. 
+                            <strong>Derechos</strong>: Puede retirar su consentimieno en cualquier momento, así como acceder, rectificar, 
+                            suprimir sus datos y otros derechos dirigiéndose a <a href="mailto:info@ritmo.org">info@ritmo.org</a>. 
+                            <strong>Información Adicional</strong>: Puede ampliar la información en el enlace de 
+                            <a href="#">Aviso Legal</a> i <a href="#">Política de privacidad</a>. </p>
+                        <div>
+                            <input type="checkbox" id="legal" name="legal" value="true" required>
+                            <label for="legal"><span>He leído y acepto la <a href="#">política de privacidad</a></span><abbr title="required">*</abbr></label>
+                        </div>
+                        <div><button type="submit">Enviar</button></div>
+                    </div>
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="container center">
+            <p class="caption">2022 &copy; Laura López Doval.</p>
+            <ul class="nav-footer">
+                <li><a href="">Aviso legal</a></li>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Política de cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+  </body>
+</html>
